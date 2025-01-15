@@ -31,6 +31,19 @@ namespace bib
 	void Application::Update()
 	{
 		mSpeed += 0.001f;
+
+		if (GetAsyncKeyState(VK_LEFT) & 0x8000) {
+			axisX -= 0.001f;
+		}
+		if (GetAsyncKeyState(VK_RIGHT) & 0x8000) {
+			axisX += 0.001f;
+		}
+		if (GetAsyncKeyState(VK_UP) & 0x8000) {
+			axisY -= 0.001f;
+		}
+		if (GetAsyncKeyState(VK_DOWN) & 0x8000) {
+			axisY += 0.001f;
+		}
 	}
 	void Application::LateUpdate()
 	{
@@ -43,13 +56,14 @@ namespace bib
 
 		HBRUSH oldBrush = (HBRUSH)SelectObject(mHdc, blueBrush);
 
-		//HPEN redpen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-		//HPEN oldpen = (HPEN)SelectObject(mHdc, redpen);
+		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
+		HPEN oldPen = (HPEN)SelectObject(mHdc, redPen);
+		SelectObject(mHdc, oldPen);
 
-		Rectangle(mHdc, 100 + mSpeed, 100, 200 + mSpeed, 200);
+		Rectangle(mHdc, 100 + axisX, 100 + axisY, 200 + axisX, 200 + axisY);
 
 		SelectObject(mHdc, oldBrush);
-		//DeleteObject(redpen);
+		DeleteObject(redPen);
 		DeleteObject(blueBrush);
 	}
 }
