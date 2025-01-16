@@ -1,6 +1,6 @@
 #pragma once
+#include "bibGameObject.h"
 #include "CommonInclude.h"
-
 namespace bib {
 	class Application
 	{
@@ -18,9 +18,11 @@ namespace bib {
 		HWND mHwnd;
 		HDC mHdc;
 
-		float mSpeed;
-		float axisX;
-		float axisY;
+		//float mSpeed;
+		//float axisX;
+		//float axisY;
+
+		GameObject mPlayer;
 	};
 
 }
