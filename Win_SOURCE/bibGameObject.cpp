@@ -1,5 +1,6 @@
 #include "bibGameObject.h"
 #include "bibInput.h"
+#include "bibTime.h"
 namespace bib
 {
 	GameObject::GameObject()
@@ -10,21 +11,22 @@ namespace bib
 	}
 	void GameObject::Update()
 	{
+		const int speed = 100.0f;
 		if (Input::GetKey(eKeyCode::A))
 		{
-			axisX -= 0.001f;
+			axisX -= speed*Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::D))
 		{
-			axisX += 0.001f;
+			axisX += speed * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::W))
 		{
-			axisY -= 0.001f;
+			axisY -= speed * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::S))
 		{
-			axisY += 0.001f;
+			axisY += speed * Time::DeltaTime();
 		}
 	}
 	void GameObject::LateUpdate()

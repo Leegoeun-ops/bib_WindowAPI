@@ -31,11 +31,19 @@ namespace bib
 		static void Initialize();
 		static void Update();
 		
-		static bool GetKeyDown(eKeyCode key) { return mKeys[(UINT)key].state == eKeyState::Down; }
-		static bool GetKeyUp(eKeyCode key) { return mKeys[(UINT)key].state == eKeyState::Up; }
-		static bool GetKey(eKeyCode key) { return mKeys[(UINT)key].state == eKeyState::Pressed; }
+		static bool GetKeyDown(eKeyCode key) { return Keys[(UINT)key].state == eKeyState::Down; }
+		static bool GetKeyUp(eKeyCode key) { return Keys[(UINT)key].state == eKeyState::Up; }
+		static bool GetKey(eKeyCode key) { return Keys[(UINT)key].state == eKeyState::Pressed; }
 	
 	private:
-		static std::vector<Key> mKeys;
+		static void createKeys();
+		static void updateKeys();
+		static void updateKey(Input::Key& key);
+		static bool isKeyDown(eKeyCode code);
+		static void updateKeyDown(Input::Key& key);
+		static void updateKeyUp(Input::Key& key);
+
+	private:
+		static std::vector<Key> Keys;
 	};
 }

@@ -16,12 +16,14 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)bibGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)winApplication.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)bibGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)winApplication.cpp" />
   </ItemGroup>
 </Project>
