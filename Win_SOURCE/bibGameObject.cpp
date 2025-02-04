@@ -4,7 +4,10 @@
 namespace bib
 {
 	GameObject::GameObject()
+		: axisX(0)
+		, axisY(0)
 	{
+
 	}
 	GameObject::~GameObject()
 	{
@@ -14,7 +17,7 @@ namespace bib
 		const int speed = 100.0f;
 		if (Input::GetKey(eKeyCode::A))
 		{
-			axisX -= speed*Time::DeltaTime();
+			axisX -= speed * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::D))
 		{
@@ -35,13 +38,14 @@ namespace bib
 	void GameObject::Render(HDC hdc)
 	{
 		// TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
-		HBRUSH blueBrush = CreateSolidBrush(RGB(0, 0, 255));
+		HBRUSH blueBrush = CreateSolidBrush(RGB(rand() % 255, rand() % 255, rand() % 255));
 		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBrush);
-		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
+		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(rand() % 255, rand() % 255, rand() % 255));
 		HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
 		SelectObject(hdc, oldPen);
-		Rectangle(hdc, 100 + axisX, 100 + axisY, 200 + axisX, 200 + axisY);
-		SelectObject(hdc, oldBrush);
+		//Rectangle(hdc, axisX, axisY, 100 + axisX, 100 + axisY);
+		//SelectObject(hdc, oldBrush);
+		Ellipse(hdc, axisX, axisY, 100 + axisX, 100 + axisY);
 		DeleteObject(redPen);
 		DeleteObject(blueBrush);
 	}

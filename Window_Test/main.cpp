@@ -5,6 +5,7 @@
 #include "Window_Test.h"
 
 #include "..\\Win_SOURCE\\winApplication.h"
+#include "..\\WinLib_main\\bibLoadScene.h"
 
 //#pragma comment (lib, "..\\x64\\Debug\\WinLib_main.lib")
 
@@ -135,6 +136,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+   bib::LoadScenes();
 
    return TRUE;
 }

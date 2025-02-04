@@ -14,15 +14,21 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)winApplication.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)winApplication.cpp" />
   </ItemGroup>
