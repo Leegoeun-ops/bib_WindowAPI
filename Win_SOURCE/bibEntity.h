@@ -7,10 +7,10 @@ namespace bib {
 	public:
 		Entity();
 		virtual ~Entity();
-		void SetName(const std::wstring& sceneName) { mSceneName = sceneName; }
-		std::wstring GetName() const { return mSceneName; }
+		void SetName(const std::wstring& Name) { mName = Name; }
+		std::wstring GetName() const { return mName; }
 	private:
-		std::wstring mSceneName;
+		std::wstring mName;
 	};
 
 }

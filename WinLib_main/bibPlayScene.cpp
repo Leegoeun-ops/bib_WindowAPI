@@ -1,5 +1,9 @@
 #include "bibPlayScene.h"
 #include "bibGameObject.h"
+#include "bibPlayer.h"
+#include "bibTransform.h"
+#include "bibSpriteRenderer.h"
+
 namespace bib
 {
 	PlayScene::PlayScene()
@@ -10,21 +14,24 @@ namespace bib
 	}
 	void PlayScene::Initialize()
 	{
-		for (size_t i = 0; i < 100; i++)
 		{
-			GameObject* obj = new GameObject();
-			obj->SetPosition(rand() % 1600, rand() % 900);
-			AddGameObject(obj);
-		}
+			Player* bg = new Player();
+			Transform* tr = bg->AddComponent<Transform>();
+			tr->SetPos(Vector2(0, 0));
 
+			tr->SetName(L"TR");
+
+			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+			sr->SetName(L"SR");
+			sr->ImageLoad(L"D:\GitHub\Test\Window_Editor\Window_Test\CloudOcean.png");
+
+
+			AddGameObject(bg);
+		}
 	}
 	void PlayScene::Update()
 	{
 		Scene::Update();
-		//for (GameObject* gameObj : mGameObjects)
-		//{
-		//	gameObj->Update();
-		//}
 	}
 	void PlayScene::LateUpdate()
 	{

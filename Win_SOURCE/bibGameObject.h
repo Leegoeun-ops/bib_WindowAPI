@@ -1,5 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
+#include "bibComponent.h"
 
 namespace bib
 {
@@ -9,22 +10,36 @@ namespace bib
 		GameObject();
 		~GameObject();
 
-		void Update();
-		void LateUpdate();
-		void Render(HDC hdc);
+		virtual void Initialize();
+		virtual void Update();
+		virtual void LateUpdate();
+		virtual void Render(HDC hdc);
 
-
-		void SetPosition(float x, float y)
+		template <typename T>
+		T* AddComponent()
 		{
-			axisX = x;
-			axisY = y;
+			T* comp = new T();
+			comp->SetOwner(this);
+			mComponents.push_back(comp);
+
+			return comp;
 		}
 
-		float GetPositionX() { return axisX; }
-		float GetPositionY() { return axisY; }
-	private:
-		float axisX;
-		float axisY;
-	};
+		template <typename T>
+		T* GetComponent()
+		{
+			T* component = nullptr;
+			for (Component* comp : mComponents)
+			{
+				component = dynamic_cast<T*>(comp);
+				if (component)
+					break;
+			}
 
+			return component;
+		}
+
+	private:
+		std::vector<Component*> mComponents;
+	};
 }

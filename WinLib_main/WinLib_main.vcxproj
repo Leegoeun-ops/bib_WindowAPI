@@ -146,9 +146,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="bibLoadScene.h" />
+    <ClInclude Include="bibPlayer.h" />
     <ClInclude Include="bibPlayScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="bibPlayer.cpp" />
     <ClCompile Include="bibPlayScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

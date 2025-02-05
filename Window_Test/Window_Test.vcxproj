@@ -24,7 +24,7 @@
     <ProjectGuid>{f708beda-9963-4ad6-a544-c8deb6a19b0b}</ProjectGuid>
     <RootNamespace>WindowTest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Editor_Window</ProjectName>
+    <ProjectName>Window_Test</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -156,6 +156,9 @@
     <ResourceCompile Include="Window_Test.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="CloudOcean.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="small.ico" />
     <Image Include="Window_Test.ico" />
   </ItemGroup>

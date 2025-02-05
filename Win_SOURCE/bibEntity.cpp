@@ -2,7 +2,7 @@
 namespace bib
 {
 	Entity::Entity()
-		: mSceneName(L"")
+		: mName(L"")
 	{
 
 	}

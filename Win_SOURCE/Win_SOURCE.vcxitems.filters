@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibGameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibTransform.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)winApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibEntity.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibMath.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibSceneManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibGameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibTime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibTransform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)winApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibEntity.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibMath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibSceneManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{771ec7e9-0580-4592-98e9-8a92539a31e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{126ec42b-071a-47ab-aa2b-4013c96ab519}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{13e0f043-4400-498b-9b53-16b813d6a3f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{1041b211-9450-455f-b72c-12c1b5d32f55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="High Level Interface">
+      <UniqueIdentifier>{ebdd18be-38f7-4f03-a94c-ca468b60e029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{87646292-bc50-4580-8a7a-8974f9f455b7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

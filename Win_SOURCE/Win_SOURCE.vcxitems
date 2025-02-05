@@ -14,22 +14,32 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibTime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibTransform.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)winApplication.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibTransform.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)winApplication.cpp" />
   </ItemGroup>
 </Project>

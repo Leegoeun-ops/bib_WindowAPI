@@ -32,6 +32,9 @@
     <Image Include="Window_Test.ico">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="CloudOcean.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
