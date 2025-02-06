@@ -21,6 +21,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)bibInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibSceneManager.h" />

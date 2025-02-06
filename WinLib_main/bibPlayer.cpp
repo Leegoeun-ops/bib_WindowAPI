@@ -20,7 +20,7 @@ namespace bib
 			Transform* tr = GetComponent<Transform>();
 			Vector2 pos = tr->GetPosition();
 			pos.x += 100 * Time::DeltaTime();
-			tr->SetPos(pos);
+			tr->SetPosition(pos);
 		}
 	}
 	void Player::Render(HDC hdc)

@@ -1,10 +1,13 @@
 #include "bibGameObject.h"
 #include "bibInput.h"
 #include "bibTime.h"
+#include "bibTransform.h"
+
 namespace bib
 {
 	GameObject::GameObject()
 	{
+		InitializeTransform();
 	}
 
 	GameObject::~GameObject()
@@ -47,7 +50,10 @@ namespace bib
 		{
 			comp->Render(hdc);
 		}
+	}
 
-
+	void GameObject::initializeTransform()
+	{
+		AddComponent<Transform>();
 	}
 }

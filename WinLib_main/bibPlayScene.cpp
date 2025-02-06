@@ -6,6 +6,7 @@
 #include "bibInput.h"
 #include "bibTitleScene.h"
 #include "bibSceneManager.h"
+#include "bibObject.h"
 
 namespace bib
 {
@@ -17,20 +18,13 @@ namespace bib
 	}
 	void PlayScene::Initialize()
 	{
-		{
-			bg = new Player();
-			Transform* tr = bg->AddComponent<Transform>();
-			tr->SetPos(Vector2(0, 0));
+		bg = object::Instantiate<Player>
+			(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
+		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+		sr->ImageLoad(L"D:\\GitHub\\Test\\Window_Editor\\Window_Test\\CloudOcean.png");
 
-			tr->SetName(L"TR");
-
-			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
-			sr->SetName(L"SR");
-			sr->ImageLoad(L"D:\\GitHub\\Test\\Window_Editor\\Window_Test\\CloudOcean.png");
-
-
-			AddGameObject(bg, eLayerType::BackGround);
-		}
+		// 게임 오브젝트 생성후에 레이어와 게임오브젝트들의 init함수를 호출
+		Scene::Initialize();
 	}
 	void PlayScene::Update()
 	{
@@ -56,7 +50,7 @@ namespace bib
 	}
 	void PlayScene::OnExit()
 	{
-		Transform* tr = bg->GetComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
+		//transform* tr = bg->getcomponent<transform>();
+		//tr->setpos(vector2(0, 0));
 	}
 }

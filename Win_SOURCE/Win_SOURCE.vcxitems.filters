@@ -55,6 +55,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)bibEnums.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibObject.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">

@@ -1,5 +1,5 @@
 #pragma once
-namespace bib
+namespace bib::enums
 {
 	enum class eLayerType
 	{
