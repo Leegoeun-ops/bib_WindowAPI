@@ -23,7 +23,7 @@ namespace bib
 
 			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
 			sr->SetName(L"SR");
-			sr->ImageLoad(L"D:\GitHub\Test\Window_Editor\Window_Test\CloudOcean.png");
+			sr->ImageLoad(L"D:\\GitHub\\Test\\Window_Editor\\Window_Test\\CloudOcean.png");
 
 
 			AddGameObject(bg);
