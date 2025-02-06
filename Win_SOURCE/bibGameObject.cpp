@@ -7,7 +7,7 @@ namespace bib
 {
 	GameObject::GameObject()
 	{
-		InitializeTransform();
+		initializeTransform();
 	}
 
 	GameObject::~GameObject()
