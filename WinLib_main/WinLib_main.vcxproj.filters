@@ -10,12 +10,18 @@
     <ClInclude Include="bibPlayScene.h">
       <Filter>Scene</Filter>
     </ClInclude>
+    <ClInclude Include="bibTitleScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bibPlayer.cpp">
       <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="bibPlayScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="bibTitleScene.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
   </ItemGroup>

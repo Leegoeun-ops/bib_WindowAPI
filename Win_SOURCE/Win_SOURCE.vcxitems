@@ -16,8 +16,10 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)bibComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibScene.h" />
@@ -33,6 +35,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)bibEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibScene.cpp" />

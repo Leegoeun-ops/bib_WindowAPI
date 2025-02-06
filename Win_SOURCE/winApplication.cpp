@@ -49,12 +49,11 @@ namespace bib
 		Input::Update();
 		Time::Update();
 		SceneManager::Update();
-		/*for (size_t i = 0; i < mGameObjects.size(); i++) {
-			mGameObjects[i]->Update();
-		}*/
 	}
 	void Application::LateUpdate()
 	{
+		SceneManager::LateUpdate();
+
 
 	}
 	void Application::Render()

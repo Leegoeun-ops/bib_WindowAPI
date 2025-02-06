@@ -3,6 +3,9 @@
 #include "bibPlayer.h"
 #include "bibTransform.h"
 #include "bibSpriteRenderer.h"
+#include "bibInput.h"
+#include "bibTitleScene.h"
+#include "bibSceneManager.h"
 
 namespace bib
 {
@@ -15,7 +18,7 @@ namespace bib
 	void PlayScene::Initialize()
 	{
 		{
-			Player* bg = new Player();
+			bg = new Player();
 			Transform* tr = bg->AddComponent<Transform>();
 			tr->SetPos(Vector2(0, 0));
 
@@ -26,7 +29,7 @@ namespace bib
 			sr->ImageLoad(L"D:\\GitHub\\Test\\Window_Editor\\Window_Test\\CloudOcean.png");
 
 
-			AddGameObject(bg);
+			AddGameObject(bg, eLayerType::BackGround);
 		}
 	}
 	void PlayScene::Update()
@@ -36,9 +39,24 @@ namespace bib
 	void PlayScene::LateUpdate()
 	{
 		Scene::LateUpdate();
+
+		if (Input::GetKeyDown(eKeyCode::N)) {
+			SceneManager::LoadScene(L"TitleScene");
+		}
 	}
 	void PlayScene::Render(HDC hdc)
 	{
 		Scene::Render(hdc);
+		wchar_t str[50] = L"Play Scene";
+		TextOut(hdc, 0, 0, str, 10);
+	}
+
+	void PlayScene::OnEnter()
+	{
+	}
+	void PlayScene::OnExit()
+	{
+		Transform* tr = bg->GetComponent<Transform>();
+		tr->SetPos(Vector2(0, 0));
 	}
 }

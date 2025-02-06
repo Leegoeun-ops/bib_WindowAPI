@@ -23,6 +23,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)bibSceneManager.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibLayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)bibGameObject.h" />
@@ -50,6 +51,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibEnums.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -69,6 +74,9 @@
     </Filter>
     <Filter Include="Scene">
       <UniqueIdentifier>{87646292-bc50-4580-8a7a-8974f9f455b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer">
+      <UniqueIdentifier>{e24e850d-f9ce-4ab6-83c6-4e1645809fdf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
