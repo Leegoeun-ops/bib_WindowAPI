@@ -7,6 +7,8 @@
 #include "bibTitleScene.h"
 #include "bibSceneManager.h"
 #include "bibObject.h"
+#include "bibTexture.h"
+#include "bibResources.h"
 
 namespace bib
 {
@@ -18,10 +20,11 @@ namespace bib
 	}
 	void PlayScene::Initialize()
 	{
-		bg = object::Instantiate<Player>
-			(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
+		bg = object::Instantiate<Player>(enums::eLayerType::BackGround/*, Vector2(100.0f, 100.0f)*/);
 		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
-		sr->ImageLoad(L"D:\\GitHub\\Test\\Window_Editor\\Window_Test\\CloudOcean.png");
+		//sr->Load(L"D:\\GitHub\\Test\\Window_Editor\\Window_Test\\CloudOcean.png");
+		graphics::Texture* bg = Resources::Find<graphics::Texture>(L"BG");
+		sr->SetTexture(bg);
 
 		// 게임 오브젝트 생성후에 레이어와 게임오브젝트들의 init함수를 호출
 		Scene::Initialize();

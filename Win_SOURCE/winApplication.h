@@ -14,6 +14,7 @@ namespace bib {
 		void Update();
 		void LateUpdate();
 		void Render();
+		HDC GetHdc() { return mHdc; }
 
 	private:
 		void clearRenderTarget();
@@ -31,10 +32,10 @@ namespace bib {
 
 		UINT mWidth;
 		UINT mHeight;
-		GameObject mPlayer;
+		//GameObject mPlayer;
 		//GameObject* pPlayer;
 
-		std::vector<GameObject*> mGameObjects;
+		//std::vector<GameObject*> mGameObjects;
 	};
 
 }

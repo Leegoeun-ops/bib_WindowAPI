@@ -3,7 +3,6 @@
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)bibGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibInput.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)bibResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibTransform.cpp" />
@@ -24,11 +23,17 @@
       <Filter>Scene</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)bibLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibResources.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibTexture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)bibGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibInput.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)bibResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibTransform.h" />
@@ -56,6 +61,13 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)bibObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibResources.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibTexture.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -78,6 +90,9 @@
     </Filter>
     <Filter Include="Layer">
       <UniqueIdentifier>{e24e850d-f9ce-4ab6-83c6-4e1645809fdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{29687050-2cf8-46f7-a1fb-99b81e39fbb8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

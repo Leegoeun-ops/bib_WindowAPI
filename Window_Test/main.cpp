@@ -5,6 +5,7 @@
 #include "Window_Test.h"
 
 #include "..\\Win_SOURCE\\winApplication.h"
+#include "..\\WinLib_main\\bibLoadResources.h"
 #include "..\\WinLib_main\\bibLoadScene.h"
 
 bib::Application app;
@@ -139,6 +140,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    Gdiplus::GdiplusStartup(&gpToken, &gpsi, NULL);
 
+   bib::LoadResources();
    bib::LoadScenes();
 
    return TRUE;

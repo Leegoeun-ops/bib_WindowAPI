@@ -1,13 +1,14 @@
 #include "bibSpriteRenderer.h"
 #include "bibGameObject.h"
 #include "bibTransform.h"
+#include "bibTexture.h"
 
 namespace bib
 {
 	SpriteRenderer::SpriteRenderer()
-		: mImage(nullptr)
-		, mWidth(0)
-		, mHeight(0)
+		:Component()
+		, mTexture(nullptr)
+		, mSize(Vector2::One)
 	{
 	}
 	SpriteRenderer::~SpriteRenderer()
@@ -25,11 +26,25 @@ namespace bib
 
 	void SpriteRenderer::Render(HDC hdc)
 	{
+		if (mTexture == nullptr)
+			assert(false);
+
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
 
-		Gdiplus::Graphics graphcis(hdc);
-		graphcis.DrawImage(mImage, Gdiplus::Rect(pos.x, pos.y, mWidth, mHeight));
-	}
+		if (mTexture->GetTextureType() == graphics::Texture::eTextureType::Bmp) 
+		{
+			TransparentBlt(hdc, pos.x, pos.y
+				, mTexture->GetWidth() * mSize.x, mTexture->GetHeight() * mSize.y
+				, mTexture->GetHdc(), 0, 0, mTexture->GetWidth(), mTexture->GetHeight()
+				, RGB(255, 0, 255));
+		}
+		else if (mTexture->GetTextureType() == graphics::Texture::eTextureType::Png)
+		{
+			Gdiplus::Graphics graphcis(hdc);
+			graphcis.DrawImage(mTexture->GetImage()
+				, Gdiplus::Rect(pos.x, pos.y
+					, mTexture->GetWidth() * mSize.x, mTexture->GetHeight() * mSize.y));
+		}
 	}
 }

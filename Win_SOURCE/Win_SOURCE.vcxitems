@@ -23,9 +23,11 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)bibMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibTransform.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
@@ -39,9 +41,11 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)bibLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibTransform.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)winApplication.cpp" />
