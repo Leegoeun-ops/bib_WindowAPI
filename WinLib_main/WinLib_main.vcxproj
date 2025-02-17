@@ -149,11 +149,13 @@
     <ClInclude Include="bibLoadResources.h" />
     <ClInclude Include="bibLoadScene.h" />
     <ClInclude Include="bibPlayer.h" />
+    <ClInclude Include="bibPlayerScript.h" />
     <ClInclude Include="bibPlayScene.h" />
     <ClInclude Include="bibTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bibPlayer.cpp" />
+    <ClCompile Include="bibPlayerScript.cpp" />
     <ClCompile Include="bibPlayScene.cpp" />
     <ClCompile Include="bibTitleScene.cpp" />
   </ItemGroup>

@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)bibGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibInput.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibTime.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)bibTransform.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)winApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibComponent.cpp">
       <Filter>Component</Filter>
     </ClCompile>
@@ -22,22 +18,37 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)bibSceneManager.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)bibLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)bibResources.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)bibResource.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)bibTexture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibTexture.cpp">
+      <Filter>Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibTransform.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibGameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)winApplication.cpp">
+      <Filter>High Level Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibLayer.cpp">
+      <Filter>Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibCamera.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)bibScript.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)bibGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibInput.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibTime.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)bibTransform.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)winApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibComponent.h">
       <Filter>Component</Filter>
     </ClInclude>
@@ -56,7 +67,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)bibLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)bibEnums.h">
       <Filter>Common</Filter>
     </ClInclude>
@@ -67,7 +77,27 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)bibResources.h">
       <Filter>Resource</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)bibTexture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibTexture.h">
+      <Filter>Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibSpriteRenderer.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibTransform.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibGameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)winApplication.h">
+      <Filter>High Level Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibLayer.h">
+      <Filter>Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibCamera.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bibScript.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -93,6 +123,9 @@
     </Filter>
     <Filter Include="Resource">
       <UniqueIdentifier>{29687050-2cf8-46f7-a1fb-99b81e39fbb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Texture">
+      <UniqueIdentifier>{808fa4c0-037d-4895-8e3c-029ba00243fd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

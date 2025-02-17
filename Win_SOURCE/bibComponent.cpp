@@ -1,7 +1,8 @@
 #include "bibComponent.h"
 namespace bib
 {
-	Component::Component()
+	Component::Component(enums::eComponentType type)
+		: mType(type)
 	{
 	}
 	Component::~Component()

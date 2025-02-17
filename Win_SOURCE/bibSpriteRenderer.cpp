@@ -2,11 +2,12 @@
 #include "bibGameObject.h"
 #include "bibTransform.h"
 #include "bibTexture.h"
+#include "bibRenderer.h"
 
 namespace bib
 {
 	SpriteRenderer::SpriteRenderer()
-		:Component()
+		:Component(enums::eComponentType::SpriteRenderer)
 		, mTexture(nullptr)
 		, mSize(Vector2::One)
 	{
@@ -32,6 +33,7 @@ namespace bib
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
 
+		pos = renderer::mainCamera->CaluatePosition(pos);
 		if (mTexture->GetTextureType() == graphics::Texture::eTextureType::Bmp) 
 		{
 			TransparentBlt(hdc, pos.x, pos.y

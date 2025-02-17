@@ -9,6 +9,9 @@
 #include "bibObject.h"
 #include "bibTexture.h"
 #include "bibResources.h"
+#include "bibPlayerScript.h"
+#include "bibCamera.h"
+#include "bibRenderer.h"
 
 namespace bib
 {
@@ -20,11 +23,26 @@ namespace bib
 	}
 	void PlayScene::Initialize()
 	{
-		bg = object::Instantiate<Player>(enums::eLayerType::BackGround/*, Vector2(100.0f, 100.0f)*/);
-		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
-		//sr->Load(L"D:\\GitHub\\Test\\Window_Editor\\Window_Test\\CloudOcean.png");
-		graphics::Texture* bg = Resources::Find<graphics::Texture>(L"BG");
-		sr->SetTexture(bg);
+
+		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None, Vector2(344.0f, 442.0f));
+		Camera* cameraComp = camera->AddComponent<Camera>();
+		renderer::mainCamera = cameraComp;
+		//camera->AddComponent<PlayerScript>();
+		mPlayer = object::Instantiate<Player>
+			(enums::eLayerType::Player/*, Vector2(100.0f, 100.0f)*/);
+		SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
+		sr->SetSize(Vector2(3.0f, 3.0f));
+		mPlayer->AddComponent<PlayerScript>();
+		graphics::Texture* packmanTexture = Resources::Find<graphics::Texture>(L"PackMan");
+		sr->SetTexture(packmanTexture);
+		GameObject* bg = object::Instantiate<GameObject>
+			(enums::eLayerType::BackGround/*, Vector2(100.0f, 100.0f)*/);
+
+		SpriteRenderer* bgSr = bg->AddComponent<SpriteRenderer>();
+		bgSr->SetSize(Vector2(3.0f, 3.0f));
+
+		graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"Map");
+		bgSr->SetTexture(bgTexture);
 
 		// 게임 오브젝트 생성후에 레이어와 게임오브젝트들의 init함수를 호출
 		Scene::Initialize();
@@ -44,8 +62,8 @@ namespace bib
 	void PlayScene::Render(HDC hdc)
 	{
 		Scene::Render(hdc);
-		wchar_t str[50] = L"Play Scene";
-		TextOut(hdc, 0, 0, str, 10);
+		//wchar_t str[50] = L"Play Scene";
+		//TextOut(hdc, 0, 0, str, 10);
 	}
 
 	void PlayScene::OnEnter()

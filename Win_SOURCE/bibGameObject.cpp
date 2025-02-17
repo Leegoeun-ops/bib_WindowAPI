@@ -7,6 +7,7 @@ namespace bib
 {
 	GameObject::GameObject()
 	{
+		mComponents.resize((UINT)enums::eComponentType::End);
 		initializeTransform();
 	}
 
@@ -23,6 +24,9 @@ namespace bib
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
+
 			comp->Initialize();
 		}
 	}
@@ -32,6 +36,8 @@ namespace bib
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
 			comp->Update();
 		}
 	}
@@ -40,6 +46,8 @@ namespace bib
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
 			comp->LateUpdate();
 		}
 	}
@@ -48,6 +56,8 @@ namespace bib
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
 			comp->Render(hdc);
 		}
 	}

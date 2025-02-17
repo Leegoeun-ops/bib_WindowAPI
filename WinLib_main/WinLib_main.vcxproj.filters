@@ -16,6 +16,7 @@
     <ClInclude Include="bibLoadResources.h">
       <Filter>Scene</Filter>
     </ClInclude>
+    <ClInclude Include="bibPlayerScript.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bibPlayer.cpp">
@@ -27,6 +28,7 @@
     <ClCompile Include="bibTitleScene.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
+    <ClCompile Include="bibPlayerScript.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Contents">

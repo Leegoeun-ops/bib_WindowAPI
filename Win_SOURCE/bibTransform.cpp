@@ -2,6 +2,7 @@
 namespace bib
 {
 	Transform::Transform()
+		: Component(enums::eComponentType::Transform)
 	{
 	}
 	Transform::~Transform()
